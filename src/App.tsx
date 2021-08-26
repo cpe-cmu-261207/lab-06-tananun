@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-// import About from './components/About';
+import About from './components/About';
 import Current from './components/Current';
 // import History from './components/History';
 
@@ -11,8 +11,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route path='/current'><Current/></Route>
-        {/* <Route path='/history'><History/> </Route>
-        <Route path='/about'><About/></Route> */}
+        {/* <Route path='/history'><History/> </Route> */}
+        <Route path='/about'><About/></Route>
       </Switch>
 
       {/* template for /current
