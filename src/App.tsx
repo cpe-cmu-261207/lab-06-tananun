@@ -1,13 +1,21 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+// import About from './components/About';
+import Current from './components/Current';
+// import History from './components/History';
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Switch>
+        <Route path='/current'><Current/></Route>
+        {/* <Route path='/history'><History/> </Route>
+        <Route path='/about'><About/></Route> */}
+      </Switch>
 
-      {/* template for /current */}
+      {/* template for /current
       <div className='text-center space-y-3'>
         <p className='text-2xl font-semibold'>Current price</p>
         <p className='text-2xl'>Loading ...</p>
@@ -18,7 +26,7 @@ function App() {
       <br />
 
       {/* template for /history/select */}
-      <div className='text-center space-y-3 space-x-3'>
+      {/* <div className='text-center space-y-3 space-x-3'>
         <p className='text-2xl font-semibold'>Select historical range</p>
         <span>From date</span>
         <input type='date' onChange={e => console.log(e.target.value)}></input>
@@ -28,10 +36,10 @@ function App() {
         <button>Get data</button>
       </div>
 
-      <br />
+      <br /> */}
 
       {/* template for /history/result */}
-      <div className='text-center space-y-3'>
+      {/* <div className='text-center space-y-3'>
         <p className='text-2xl font-semibold'>Historical price</p>
         <p className='text-2xl'>Loading ...</p>
         <p className='text-2xl text-red-500'>There was an error. Please try again later.</p>
@@ -43,15 +51,15 @@ function App() {
         </ul>
       </div>
 
-      <br />
+      <br /> */}
 
       {/* template for about me */}
-      <div className='text-center space-y-3'>
+      {/* <div className='text-center space-y-3'>
         <p className='text-2xl font-semibold'>About me</p>
         <p className='text-xl'>Chayanin Suatap 610631100</p>
-      </div>
+      </div> */}
 
-    </Router>
+     </Router>
   );
 }
 
