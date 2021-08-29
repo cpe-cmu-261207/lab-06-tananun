@@ -7,7 +7,7 @@ const Navbar = () => {
 			<div className='flex justify-center text-md space-x-5'>
 				<p> <Link to='/current'>Current price</Link></p>	
 				<p>|</p>
-				<p> <Link to='/Hisorical'>Historical price</Link></p>	
+				<p> <Link to='/history/select'>Historical price</Link></p>	
 				<p>|</p>
 				<p> <Link to='/about'>About me</Link></p>	
 			</div>
@@ -15,4 +15,4 @@ const Navbar = () => {
 	)
 }
 
-export default Navbar
+export default Navbar;

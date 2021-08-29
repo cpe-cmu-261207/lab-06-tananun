@@ -3,17 +3,25 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import About from './components/About';
 import Current from './components/Current';
-// import History from './components/History';
+import HistoryResult from './components/HistoryResult';
+import HistorySelect from './components/HistorySelect';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route path='/current'><Current/></Route>
-        {/* <Route path='/history'><History/> </Route> */}
-        <Route path='/about'><About/></Route>
+        <Route path="/" exact><Current/></Route>
+        <Route path="/current"><Current/></Route>
+        <Route path="/history/select"><HistorySelect/> </Route>
+        <Route path="/history/result"><HistoryResult/> </Route>
+        <Route path="/about"><About/></Route>
       </Switch>
+      </Router>
+  );
+}
+
+export default App;
 
       {/* template for /current
       <div className='text-center space-y-3'>
@@ -59,8 +67,4 @@ function App() {
         <p className='text-xl'>Chayanin Suatap 610631100</p>
       </div> */}
 
-     </Router>
-  );
-}
-
-export default App;
+     
